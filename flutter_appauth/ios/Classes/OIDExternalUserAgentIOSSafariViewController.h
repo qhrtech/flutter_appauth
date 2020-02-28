@@ -19,10 +19,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OIDExternalUserAgentIOSSafariViewController.h"
-#import "OIDExternalUserAgent.h"
-#import "OIDExternalUserAgentIOS.h"
+@class OIDExternalUserAgent;
+@class OIDExternalUserAgentIOS;
 
+#import <SafariServices/SafariServices.h>
 NS_ASSUME_NONNULL_BEGIN
 
 /*! @brief Allows library consumers to bootstrap an @c SFSafariViewController as they see fit.
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*! @brief Creates and returns a new @c SFSafariViewController.
     @param URL The URL which the @c SFSafariViewController should load initially.
  */
-- (SFSafariViewController *)safariViewControllerWithURL:(NSURL *)URL;
+- (SFSafariViewController *)safariViewControllerWithURL:(NSURL *)URL API_AVAILABLE(ios(9.0));
 
 @end
 
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
         AppAuth user-agent handling with the benefits of Single Sign-on (SSO)
         for all supported versions of iOS.
  */
-@interface OIDExternalUserAgentIOSSafariViewController : NSObject <OIDExternalUserAgent>
+@interface OIDExternalUserAgentIOSSafariViewController : NSObject
 
 /*! @brief Allows library consumers to change the @c OIDSafariViewControllerFactory used to create
         new instances of @c SFSafariViewController.
