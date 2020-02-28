@@ -19,11 +19,6 @@
 
 #import <UIKit/UIKit.h>
 
-//#import "OIDExternalUserAgentIOSSafariViewController.h"
-//#import "OIDExternalUserAgent.h"
-//#import "OIDExternalUserAgentIOS.h"
-
-//@class OIDExternalUserAgentIOSSafariViewController;
 @class OIDExternalUserAgent;
 @class OIDExternalUserAgentIOS;
 
